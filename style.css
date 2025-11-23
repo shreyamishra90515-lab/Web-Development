@@ -1,0 +1,368 @@
+/* =========================================================
+   Lab Assignment 3 - Portfolio Website
+   Author: Shreya Mishra 
+   File: style.css
+   ========================================================= */
+
+body {
+    background-color: rgb(205, 214, 242);
+    color: rgb(34, 34, 34);
+    line-height: 1.6;
+    font-family: "lato", sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: rgb(192, 166, 236);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 30px 10px;
+    border-bottom: 4px solid rgb(4, 4, 4);
+}
+
+#intro {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#welcome {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+nav {
+    background-color:rgb(75, 0, 204);
+    border: 4px solid black;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.list1 {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.list-items {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navs {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 6px 10px;
+}
+
+section {
+    background-color: rgb(255, 255, 255);
+    margin: 40px auto;
+    padding: 30px 80px;
+    max-width: 900px;
+    border-radius: 12px;
+    border: 2px solid rgb(63, 63, 189);
+}
+
+section h2 {
+    text-align: center;
+    color: rgb(75, 0, 204);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#profile-image {
+    display: block;
+    margin: 15px auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgb(0, 119, 255);
+}
+
+#p1 {
+    text-align: center;
+    font-size: 16px;
+}
+
+.list2 {
+    list-style: square inside;
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgb(51, 51, 51);
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+th, td {
+    border: 2px solid rgb(143, 122, 255);
+    padding: 10px;
+    font-size: 15px;
+}
+
+.tablehead {
+    background-color: rgb(75, 0, 204);
+    color: rgb(255, 255, 255);
+}
+
+.f1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 15px;
+    font-size: 20px;
+    border: 2px solid rgb(143, 122, 255);
+    border-radius: 10px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: rgb(75, 0, 204);
+    font-size: 20px;
+}
+
+button {
+    background-color: rgb(75, 0, 204);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(89, 8, 228);
+    color: rgb(123, 51, 51);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+
+footer {
+    background-color: rgb(75, 0, 204);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 40px;
+}
+hr {
+    /* Properties to style the line */
+    border: none;  /* Removes default border */
+    height: 2px;   /* Thickness of the line */
+    background-color: #000;  /* Color (e.g., black) */
+    width: 100%;    }
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  border: 1px solid #ccc;
+}
+
+.item {
+  flex: 1;
+  padding: 10px;
+  background: lightblue;
+}
+/* style.css */
+
+/* Basic reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* CSS Grid container for the entire page layout (alternative to Flexbox) */
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for vertical stacking */
+    grid-template-rows: auto auto auto auto auto; /* Rows for header, nav, sections, etc. */
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Space between grid items */
+}
+
+/* Header section */
+header {
+    grid-column: 1; /* Spans full width */
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid for links */
+    gap: 10px;
+    justify-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0883d5;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ecf0f1;
+}
+
+/* Main content sections */
+section {
+    grid-column: 1;
+}
+
+h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* About section with Flexbox for internal layout (or could use Grid here too) */
+#About {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#About img {
+    border-radius: 50%;
+    border: 5px solid #0b8ee5;
+}
+
+/* Projects list */
+#Project {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#Project li {
+    margin-bottom: 10px;
+}
+
+/* Technical skills table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 10px solid #0b0366;
+}
+
+th {
+    background-color: #013455;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #dee6f0;
+}
+
+/* Contact form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #032a44;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #042d49;
+}
+
+/* Responsive design with Grid adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        grid-template-columns: 1fr; /* Ensure single column on mobile */
+    }
+    
+    nav {
+        grid-template-columns: 1fr; /* Stack nav links vertically on mobile */
+    }
+    
+    #About {
+        flex-direction: column;
+    }
+    
+    table {
+        font-size: 0.9em;
+    }
+}
